@@ -17,37 +17,37 @@ def nyer(feher,fekete):
 
 
 
-
-
-vel1 = random.randint(1,16)
-vel2 = random.randint(1,16)
-feher = []
-fekete = []
-
-
-
+ujra = "igen"
+while ujra == "igen":
+    vel1 = random.randint(1,16)
+    vel2 = random.randint(1,16)
+    feher = []
+    fekete = []
 
 
 
 
-for i in range(vel1):
-    vel = random.randint(1,16)
-    fekete.append(vel)
-
-
-for i in range(vel2):
-    vel = random.randint(1,16)
-    feher.append(vel)
 
 
 
-babuk = ['vezér, király, gyalog, futó, bástya, huszár']
+    for i in range(vel1):
+        vel = random.randint(1,16)
+        fekete.append(vel)
 
-print(f' a bábuk száma: ',len(fekete) + len(feher))
-print(f'feketek száma 1 o utan: {fdb(feher)}')
-print(f'feketek száma 1 o utan: {fdb(fekete)}')
 
-print(f'{nyer(feher,fekete)}')
+    for i in range(vel2):
+        vel = random.randint(1,16)
+        feher.append(vel)
+
+
+
+    babuk = ['vezér, király, gyalog, futó, bástya, huszár']
+
+    print(f' a bábuk száma: ',len(fekete) + len(feher))
+    print(f'fehérek száma 1 o utan: {fdb(feher)}')
+    print(f'feketek száma 1 o utan: {fdb(fekete)}')
+
+    print(f'{nyer(feher,fekete)}')
 
 
 #sor = 1
@@ -74,37 +74,31 @@ print(f'{nyer(feher,fekete)}')
 #sor = sor + 1
 #oszlop = oszlop + 1
 
-osszefuz=''
-for i in range(8):
-    osszefuz = ''
-    for j in range(8):
-        if i == 0 and j == 3:
-            osszefuz += 'X '
-        elif i == 1 and j == 6:
-            osszefuz += 'X '
-        elif i == 2 and j == 2:
-            osszefuz += 'X '
-        elif i == 3 and j == 7:
-            osszefuz += 'X '
-        elif i == 4 and j == 1:
-            osszefuz += 'X '
-        elif i == 5 and j == 4:
-            osszefuz += 'X '
-        elif i == 6 and j == 0:
-            osszefuz += 'X '
-        elif i == 7 and j == 5:
-            osszefuz += 'X '
+    osszefuz=''
+    for i in range(8):
+        osszefuz = ''
+        for j in range(8):
+            if i == 0 and j == 3:
+                osszefuz += 'X '
+            elif i == 1 and j == 6:
+                osszefuz += 'X '
+            elif i == 2 and j == 2:
+                osszefuz += 'X '
+            elif i == 3 and j == 7:
+                osszefuz += 'X '
+            elif i == 4 and j == 1:
+                osszefuz += 'X '
+            elif i == 5 and j == 4:
+                osszefuz += 'X '
+            elif i == 6 and j == 0:
+                osszefuz += 'X '
+            elif i == 7 and j == 5:
+                osszefuz += 'X '
+            else:
+                osszefuz += 'O '
+        print(osszefuz)
 
-        else:
-            osszefuz += 'O '
-    print(osszefuz)
-
-
-
-
-
-
-
+    ujra = input("Szeretnél újra játszani? (igen/nem): ").strip().lower()
 
 
 
